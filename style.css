@@ -1,166 +1,144 @@
-/* ===============================
-   ESTILO DO SITE - JAPÃO
-   =============================== */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+/* =====================
+   ESTILO GERAL (KAYAK STYLE)
+   ===================== */
+:root {
+  --accent: #ff6b35;
+  --muted: #6b7280;
+  --bg: #f7f9fb;
+  --card: #ffffff;
+  --radius: 14px;
+  font-family: "Inter", Arial, sans-serif;
 }
 
 body {
-  background-color: #fafafa;
-  color: #222;
-  line-height: 1.6;
+  margin: 0;
+  background: var(--bg);
+  color: #0f1724;
 }
 
-/* ---------- CABEÇALHO ---------- */
+/* =====================
+   HEADER
+   ===================== */
 header {
-  background-color: #ffffff;
-  color: #cc0000;
+  background: #0b1320;
+  color: #fff;
+  padding: 26px;
   text-align: center;
-  padding: 2rem 1rem;
-  border-bottom: 4px solid #cc0000;
 }
 
 header h1 {
-  font-size: 2rem;
-  letter-spacing: 1px;
-  margin-bottom: 0.5rem;
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
 }
 
 header p {
-  color: #444;
-  font-size: 1.1rem;
+  margin-top: 6px;
+  color: #d0d4e0;
 }
 
-/* ---------- MENU DE NAVEGAÇÃO ---------- */
+/* =====================
+   MENU
+   ===================== */
 nav {
-  background-color: #cc0000;
-  text-align: center;
-  padding: 0.8rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  padding: 12px;
   position: sticky;
   top: 0;
   z-index: 10;
 }
 
 nav a {
-  color: white;
   text-decoration: none;
-  margin: 0 18px;
+  color: #0b1320;
   font-weight: 600;
-  transition: color 0.3s ease;
+  padding: 6px 10px;
+  border-radius: 8px;
 }
 
 nav a:hover {
-  color: #ffd700;
+  background: #eef3fa;
 }
 
-/* ---------- SEÇÕES ---------- */
+/* =====================
+   CONTAINERS
+   ===================== */
 .container {
-  padding: 2.5rem 1.5rem;
-  max-width: 950px;
-  margin: auto;
+  max-width: 900px;
+  margin: 40px auto;
+  background: var(--card);
+  padding: 26px;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 20px rgba(10,14,20,0.05);
 }
 
 .container h2 {
-  color: #cc0000;
-  border-left: 6px solid #cc0000;
-  padding-left: 10px;
-  margin-bottom: 1.5rem;
-  font-size: 1.6rem;
+  margin-top: 0;
+  font-size: 26px;
+  font-weight: 800;
 }
 
-/* ---------- LISTAS ---------- */
+.container p {
+  font-size: 16px;
+  color: #333;
+}
+
+/* =====================
+   LISTAS
+   ===================== */
 ul {
-  margin-top: 1rem;
-  list-style: none;
+  padding-left: 20px;
 }
 
 ul li {
-  margin: 5px 0;
-  padding-left: 1rem;
-  border-left: 3px solid #ccc;
+  margin-bottom: 8px;
 }
 
-/* ---------- BLOCO DO ROTEIRO ---------- */
+/* =====================
+   ROTEIRO DIAS
+   ===================== */
 .dia {
-  background-color: #fff;
-  border: 1px solid #eee;
-  border-left: 5px solid #cc0000;
-  padding: 1rem 1.5rem;
-  margin-bottom: 1.2rem;
-  border-radius: 6px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: #f2f6fb;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 16px;
 }
 
-.dia:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.dia h3 {
-  color: #cc0000;
-  margin-bottom: 0.3rem;
-}
-
-/* ---------- DESTAQUE / COMPRA ---------- */
+/* =====================
+   SEÇÃO DESTAQUE
+   ===================== */
 .destaque {
-  text-align: center;
-  background-color: #fff;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  border-top: 4px solid #cc0000;
+  border-left: 6px solid var(--accent);
 }
 
-.destaque h3 {
-  color: #333;
-  margin-top: 1rem;
-}
-
-/* ---------- BOTÃO ---------- */
+/* =====================
+   BOTÃO
+   ===================== */
 button {
-  background-color: #cc0000;
-  color: white;
+  background: var(--accent);
+  color: #fff;
   border: none;
-  padding: 12px 25px;
-  margin-top: 1rem;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 30px;
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
 }
 
 button:hover {
-  background-color: #a00000;
-  transform: scale(1.05);
+  opacity: 0.9;
 }
 
-/* ---------- RODAPÉ ---------- */
+/* =====================
+   FOOTER
+   ===================== */
 footer {
   text-align: center;
-  padding: 1.5rem;
-  background-color: #333;
-  color: white;
-  font-size: 0.9rem;
-  margin-top: 3rem;
-}
-
-/* ---------- RESPONSIVIDADE ---------- */
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 1.5rem;
-  }
-
-  nav a {
-    display: inline-block;
-    margin: 10px;
-  }
-
-  .container {
-    padding: 1.5rem;
-  }
+  padding: 30px;
+  color: var(--muted);
+  font-size: 14px;
 }

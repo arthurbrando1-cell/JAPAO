@@ -1,19 +1,24 @@
 /* =====================
-   ESTILO GERAL (KAYAK STYLE)
+   VARIÁVEIS GLOBAIS
    ===================== */
 :root {
-  --accent: #ff6b35;
-  --muted: #6b7280;
-  --bg: #f7f9fb;
-  --card: #ffffff;
-  --radius: 14px;
+  --accent: #ff6b35;       /* Cor principal para destaques e botões */
+  --muted: #6b7280;        /* Cor para textos secundários e rodapé */
+  --bg: #f7f9fb;           /* Cor de fundo geral da página */
+  --card: #ffffff;          /* Fundo das seções */
+  --radius: 14px;           /* Bordas arredondadas gerais */
+  --shadow: 0 6px 20px rgba(10,14,20,0.05); /* Sombra padrão para cards */
   font-family: "Inter", Arial, sans-serif;
 }
 
+/* =====================
+   ESTILO GERAL
+   ===================== */
 body {
   margin: 0;
   background: var(--bg);
   color: #0f1724;
+  line-height: 1.6;
 }
 
 /* =====================
@@ -22,23 +27,24 @@ body {
 header {
   background: #0b1320;
   color: #fff;
-  padding: 26px;
+  padding: 40px 20px;
   text-align: center;
 }
 
 header h1 {
   margin: 0;
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 800;
 }
 
 header p {
-  margin-top: 6px;
+  margin-top: 10px;
   color: #d0d4e0;
+  font-size: 18px;
 }
 
 /* =====================
-   MENU
+   MENU / NAV
    ===================== */
 nav {
   display: flex;
@@ -46,7 +52,7 @@ nav {
   gap: 20px;
   background: #ffffff;
   box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-  padding: 12px;
+  padding: 12px 0;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -56,35 +62,39 @@ nav a {
   text-decoration: none;
   color: #0b1320;
   font-weight: 600;
-  padding: 6px 10px;
+  padding: 8px 14px;
   border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
 nav a:hover {
   background: #eef3fa;
+  color: var(--accent);
 }
 
 /* =====================
-   CONTAINERS
+   CONTAINERS PRINCIPAIS
    ===================== */
 .container {
   max-width: 900px;
   margin: 40px auto;
   background: var(--card);
-  padding: 26px;
+  padding: 30px;
   border-radius: var(--radius);
-  box-shadow: 0 6px 20px rgba(10,14,20,0.05);
+  box-shadow: var(--shadow);
 }
 
 .container h2 {
   margin-top: 0;
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 800;
+  color: #0b1320;
 }
 
 .container p {
   font-size: 16px;
   color: #333;
+  margin-bottom: 16px;
 }
 
 /* =====================
@@ -95,7 +105,8 @@ ul {
 }
 
 ul li {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  line-height: 1.5;
 }
 
 /* =====================
@@ -103,16 +114,24 @@ ul li {
    ===================== */
 .dia {
   background: #f2f6fb;
-  padding: 16px;
+  padding: 18px;
   border-radius: 12px;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
+  border-left: 4px solid var(--accent);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dia:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
 }
 
 /* =====================
-   SEÇÃO DESTAQUE
+   SEÇÃO DESTAQUE (COMPRA)
    ===================== */
 .destaque {
   border-left: 6px solid var(--accent);
+  background: #fff4f0;
 }
 
 /* =====================
@@ -122,15 +141,17 @@ button {
   background: var(--accent);
   color: #fff;
   border: none;
-  padding: 14px 20px;
+  padding: 16px 24px;
   border-radius: 12px;
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 button:hover {
   opacity: 0.9;
+  transform: translateY(-2px);
 }
 
 /* =====================
@@ -141,4 +162,40 @@ footer {
   padding: 30px;
   color: var(--muted);
   font-size: 14px;
+  background: #ffffff;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+}
+
+/* =====================
+   ELEMENTOS ADICIONAIS
+   ===================== */
+/* Subtítulos e pequenos ícones */
+h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #0b1320;
+}
+
+/* Links dentro do conteúdo */
+.container a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.container a:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+  .container {
+    margin: 20px;
+    padding: 20px;
+  }
+  header h1 {
+    font-size: 26px;
+  }
 }
